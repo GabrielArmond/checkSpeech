@@ -3,6 +3,9 @@ import './style.css'
 import Descriptions from './components/descriptions'
 import Title from './components/title'
 import Solutions from './solutions'
+import Prices from './prices'
+import Customers from './customers'
+import Contact from './contact'
 
 const Main = () => {
   return (
@@ -15,8 +18,20 @@ const Main = () => {
           <Descriptions />
         </div>
         <hr />
-        <div className="row mt-5 justify-content-center">
+        <div className="row mt-5 justify-content-center" id="#solutions">
           <Solutions />
+        </div>
+        <hr />
+        <div className="row mt-5" id="#prices">
+          <Prices />
+        </div>
+        <hr />
+        <div className="row mt-5" id="#customers">
+          <Customers />
+        </div>
+        <hr />
+        <div className="row mt-5  justify-content-center" id="#contact">
+          <Contact />
         </div>
       </div>
     </Fragment>

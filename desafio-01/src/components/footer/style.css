@@ -1,0 +1,15 @@
+.footer {
+  background-color: #F4F4F4;
+}
+
+.title-footer {
+  font-size: 2.0em !important;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.copyright {
+  font-size: 0.8em !important;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
