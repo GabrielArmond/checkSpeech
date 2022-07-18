@@ -17,7 +17,7 @@ const Customers = () => {
         <p className="title">Clientes</p>
       </div>
       {images.map((image, index) => (
-        <div key={index} className="col-md-3 col-xs-12 col-sm-12">
+        <div key={index} className="col-md-3 col-12 col-sm-12">
           <img src={image} alt="customer" className="img-fluid" />
         </div>
       ))}

@@ -1,7 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import Recaptcha from '../recaptcha'
 import axios from 'axios'
-import { useCookies } from 'react-cookie'
 
 const getCountrys = async () => {
   let response = axios.get(
@@ -22,13 +21,6 @@ const InitialState = {
 const Form = props => {
   const [countrys, setCountrys] = useState([])
   const [fields, setFields] = useState(InitialState)
-  const [cookies, setCookie] = useCookies(['user'])
-
-  const handle = () => {
-    setCookie('name', fields.name, { path: '/' })
-    setCookie('email', fields.email, { path: '/' })
-    setCookie('tel', fields.tel, { path: '/' })
-  }
 
   const handleFieldsChange = event => {
     setFields({
@@ -45,7 +37,6 @@ const Form = props => {
       console.log(e)
     } finally {
       event.preventDefault()
-      handle()
     }
   }
 

@@ -1,5 +1,13 @@
 .navigator {
-  background-color: #C4C4C4 !important;
-  color: #FFFFFF !important;
+  background-color: #457b9d !important;
+}
+
+.nav-item {
+  color: white;
+  transition: all 0.3s linear;
+}
+
+.nav-item:hover {
+  color: #1d3557;
 }
   

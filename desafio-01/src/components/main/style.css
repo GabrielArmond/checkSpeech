@@ -1,21 +1,18 @@
 .title {
   font-weight: 700;
   font-size: 50px;
-  color: black;
-  
 }
 
 .subtitle {
   font-weight: 500;
   font-size: 13px;
-  color: black;
   letter-spacing: 0.55em;
 }
 
 .description {
   font-weight: 550;
   font-size: 15px;
-  color: black;
+ 
 }
 
 .card-title {

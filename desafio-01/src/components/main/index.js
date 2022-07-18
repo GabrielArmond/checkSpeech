@@ -18,20 +18,20 @@ const Main = () => {
           <Descriptions />
         </div>
         <hr />
-        <div className="row mt-5 justify-content-center" id="#solutions">
-          <Solutions />
+        <div className="row mt-5 justify-content-center">
+          <Solutions id="#solutions" />
         </div>
         <hr />
-        <div className="row mt-5" id="#prices">
-          <Prices />
+        <div className="row mt-5">
+          <Prices id="#prices" />
         </div>
         <hr />
-        <div className="row mt-5" id="#customers">
-          <Customers />
+        <div className="row mt-5">
+          <Customers id="#customers" />
         </div>
         <hr />
-        <div className="row mt-5  justify-content-center" id="#contact">
-          <Contact />
+        <div className="row mt-5  justify-content-center">
+          <Contact id="#contact" />
         </div>
       </div>
     </Fragment>

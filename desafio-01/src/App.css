@@ -3,11 +3,19 @@
   text-align: center;
 
   padding: 20px;
-  height: 100vh;
 
-  margin: 5px;
+  background-color: #1d3557;
+  color: white;
 }
 
 .pointer {
   cursor: pointer;
+}
+
+.card {
+  color: black;
+}
+
+footer {
+  color: black;
 }
