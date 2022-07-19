@@ -13,8 +13,13 @@ const Recaptcha = props => {
 
   return (
     <Fragment>
-      <div className="col-12 mb-2">
-        <ReCAPTCHA ref={recaptchaRef} sitekey={sitekey} onChange={onChange} />
+      <div className="col-4 col-sm-12 col-md-12 mb-2">
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          sitekey={sitekey}
+          onChange={onChange}
+          size="normal"
+        />
       </div>
     </Fragment>
   )

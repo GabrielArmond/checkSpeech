@@ -1,28 +1,41 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import * as Icon from 'react-bootstrap-icons'
 
 const Nav = () => {
   return (
-    <div className="col-md-12 col-sm-12 col-12">
-      <span className="transition-anchor pointer px-5" href="#solutions">
-        Soluções &nbsp;
-        <Icon.Laptop />
-      </span>
-      <span className="transition-anchor pointer px-5" href="#prices">
-        Preços &nbsp; <Icon.CashStack />
-      </span>
-      <span className="transition-anchor pointer px-5" href="#customers">
-        Clientes &nbsp;
-        <Icon.Person />
-      </span>
-      <span
-        className="p-5 transition-anchor pointer px-5"
-        onClick={() => window.location.href('#contact')}
-      >
-        Contate-nos &nbsp;
-        <Icon.Telephone />
-      </span>
-    </div>
+    <Fragment>
+      <div className="col-12 col-md-3 col-sm-12">
+        <a className="anchor pointer px-5" href="#solutions">
+          <strong>
+            Soluções &nbsp;
+            <Icon.Laptop />
+          </strong>
+        </a>
+      </div>
+      <div className="col-12 col-md-3 col-sm-12">
+        <a className="anchor pointer px-5" href="#prices">
+          <strong>
+            Preços &nbsp; <Icon.CashStack />
+          </strong>
+        </a>
+      </div>
+      <div className="col-12 col-md-3 col-sm-12">
+        <a className="anchor  pointer px-5" href="#customers">
+          <strong>
+            Clientes &nbsp;
+            <Icon.Person />
+          </strong>
+        </a>
+      </div>
+      <div className="col-12 col-md-3 col-sm-12">
+        <a className="anchor p-5 pointer px-5" href="#contact">
+          <strong>
+            Contato &nbsp;
+            <Icon.Telephone />
+          </strong>
+        </a>
+      </div>
+    </Fragment>
   )
 }
 

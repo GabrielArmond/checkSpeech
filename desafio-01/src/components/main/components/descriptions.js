@@ -3,7 +3,7 @@ import React, { Fragment } from 'react'
 const Descriptions = () => {
   return (
     <Fragment>
-      <div className="col-md-6 col-12 col-sm-12">
+      <div className="col-md-6 col-12 col-sm-12 p-2">
         <div className="card text-center">
           <div className="card-body description">
             <div className="card-text">
@@ -14,7 +14,7 @@ const Descriptions = () => {
           </div>
         </div>
       </div>
-      <div className="col-md-6 col-12 col-sm-12">
+      <div className="col-md-6 col-12 col-sm-12 p-2">
         <div className="card text-center">
           <div className="card-body description">
             <div className="card-text">

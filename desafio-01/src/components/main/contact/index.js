@@ -10,7 +10,7 @@ const Contact = () => {
 
   return (
     <Fragment>
-      <div className="col-12 mb-2">
+      <div className="col-12 mb-2" id="contact">
         <span className="subtitle">ENTRAR EM</span>
         <p className="title">Contato</p>
       </div>

@@ -1,20 +1,22 @@
 .footer {
-  background-color: #F4F4F4;
+  background-color: #fefae0;
 }
 
-.title-footer {
-  font-size: 2.0em !important;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
+.anchor, a {
+  color: black !important;
+  text-decoration: none;
 }
 
-.transition-anchor {
+.anchor:hover {
   transition: all 0.3s linear;
+  color: #CAF0F8 !important;
+}
+  
+.title-footer {
+  font-size: 2.0rem !important;
+  text-align: center;
 }
 
-.transition-anchor:hover {
-  color: white;
-}
 
 .divisor {
   border-bottom: 1px solid #e0e0e0;
@@ -27,5 +29,5 @@
 }
 
 .icons:hover {
-  color: #457b9d
+  color: #CAF0F8
 }

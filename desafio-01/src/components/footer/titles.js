@@ -9,8 +9,9 @@ const Titles = () => {
     <Fragment>
       <div className="col-12 py-2 pointer" onClick={goToHome}>
         <img src={LogoSite} alt="logo" height={50} />
-
-        <p className="title-footer">CheckSpeech IA</p>
+        <p className="h6 title-footer roboto">
+          <strong>CheckSpeech IA</strong>
+        </p>
       </div>
     </Fragment>
   )

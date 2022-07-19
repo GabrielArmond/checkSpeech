@@ -2,14 +2,22 @@
   font-family: 'Montserrat', sans-serif;
   text-align: center;
 
-  padding: 20px;
-
-  background-color: #1d3557;
+  background-color: #fff;
   color: white;
+  min-width: 100%;
+  overflow-x: hidden;
 }
 
 .pointer {
   cursor: pointer;
+}
+
+.grab {
+  cursor: grab;
+}
+
+.grab:active {
+  cursor: grabbing;
 }
 
 .card {
@@ -18,4 +26,8 @@
 
 footer {
   color: black;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif;
 }

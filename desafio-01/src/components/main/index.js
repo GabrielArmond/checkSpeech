@@ -10,28 +10,28 @@ import Contact from './contact'
 const Main = () => {
   return (
     <Fragment>
-      <div className="container mt-5">
+      <div className="container mt-5 full-width">
         <div className="row">
           <Title />
         </div>
-        <div className="row mt-5 mb-3">
+        <div className="row m-5 mb-3">
           <Descriptions />
         </div>
-        <hr />
+
         <div className="row mt-5 justify-content-center">
-          <Solutions id="#solutions" />
+          <Solutions />
         </div>
-        <hr />
+
         <div className="row mt-5">
-          <Prices id="#prices" />
+          <Prices />
         </div>
-        <hr />
+
         <div className="row mt-5">
-          <Customers id="#customers" />
+          <Customers />
         </div>
-        <hr />
+
         <div className="row mt-5  justify-content-center">
-          <Contact id="#contact" />
+          <Contact />
         </div>
       </div>
     </Fragment>

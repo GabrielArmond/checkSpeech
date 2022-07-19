@@ -1,6 +1,9 @@
 import React, { Fragment, useEffect, useState } from 'react'
+import * as Icon from 'react-bootstrap-icons'
 import Recaptcha from '../recaptcha'
 import axios from 'axios'
+import { useCookie } from '../../../../hooks/useCookie'
+import InputPhone from './inputPhone.js'
 
 const getCountrys = async () => {
   let response = axios.get(
@@ -13,30 +16,45 @@ const getCountrys = async () => {
 const InitialState = {
   name: '',
   email: '',
-  tel: '',
+  phone: '',
   country: '',
-  term: ''
+  term: false
 }
 
 const Form = props => {
+  const { createCookie } = useCookie()
+
   const [countrys, setCountrys] = useState([])
   const [fields, setFields] = useState(InitialState)
+  const [isValid, setIsValid] = useState(false)
+  const [phone, setPhone] = useState()
 
   const handleFieldsChange = event => {
     setFields({
       ...fields,
+      term: isValid,
+      phone,
       [event.currentTarget.name]: event.currentTarget.value
     })
   }
 
+  const handleChangeAcceptTerm = () => {
+    setFields({
+      ...fields,
+      term: !fields.term
+    })
+  }
+
   const handleSubmit = event => {
+    event.preventDefault()
     try {
       props.addContact(fields)
       setFields(InitialState)
+      createCookie(fields)
     } catch (e) {
       console.log(e)
     } finally {
-      event.preventDefault()
+      setPhone('')
     }
   }
 
@@ -85,7 +103,9 @@ const Form = props => {
             required
             onChange={handleFieldsChange}
           />
-          <div className="invalid-feedback">Insira um nome</div>
+          <div className="invalid-feedback">
+            <strong>* Insira um nome</strong>
+          </div>
         </div>
         <div className="form-group p-2">
           <label htmlFor="inputEmail" className="form-label">
@@ -102,20 +122,22 @@ const Form = props => {
             required
             onChange={handleFieldsChange}
           />
-          <div className="invalid-feedback">Insira um email</div>
+          <div className="invalid-feedback">
+            <strong>* Insira um email</strong>
+          </div>
         </div>
         <div className="form-group p-2">
           <label htmlFor="inputTel" className="form-label">
             Telefone
           </label>
-          <input
+          <InputPhone
             type="text"
             id="inputTel"
-            name="tel"
-            className="form-control"
+            name="phone"
             placeholder="Seu telefone"
-            value={fields.tel}
-            onChange={handleFieldsChange}
+            phone={phone}
+            setPhone={setPhone}
+            className="form-control"
           />
         </div>
         <div className="form-group p-2">
@@ -129,38 +151,43 @@ const Form = props => {
             value={fields.country}
             name="country"
           >
-            <option value="">Selecione um país</option>
+            <option value="">* Selecione um país</option>
             {countrys.map((country, index) => (
               <option key={index} value={country.nome}>
                 {country.nome}
               </option>
             ))}
           </select>
-          <div className="invalid-feedback">Você tem que elecionar um país</div>
+          <div className="invalid-feedback">
+            <strong>Você tem que selecionar um país</strong>
+          </div>
         </div>
-        <div className="form-group form-check">
+        <div className="form-group form-check p-4">
           <input
             type="checkbox"
             id="inputCheck"
             name="term"
-            className="form-check-input"
+            className="form-check-input p-1"
             checked={fields.term}
-            onChange={handleFieldsChange}
+            value={fields.term}
+            onChange={handleChangeAcceptTerm}
             required
           />
           <label className="form-check-label" htmlFor="inputCheck">
             Eu concordo com a Política de Privacidade.
           </label>
           <div className="invalid-feedback">
-            Você precisa de aceitar os termos.
+            <strong>* Você precisa de aceitar os termos.</strong>
           </div>
         </div>
         <div className="form-group p-2">
           <Recaptcha />
         </div>
 
-        <button type="submit" className="btn btn-success p-2">
-          Entrar em contato
+        <button type="submit" className="btn btn-card text-light p-2">
+          <strong>
+            Enviar informações <Icon.SendFill />
+          </strong>
         </button>
       </form>
     </Fragment>
