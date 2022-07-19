@@ -51,6 +51,7 @@ const Form = props => {
       props.addContact(fields)
       setFields(InitialState)
       createCookie(fields)
+      alert('Dados enviados com sucesso!')
     } catch (e) {
       console.log(e)
     } finally {
@@ -151,7 +152,7 @@ const Form = props => {
             value={fields.country}
             name="country"
           >
-            <option value="">* Selecione um país</option>
+            <option value="">Selecione um país</option>
             {countrys.map((country, index) => (
               <option key={index} value={country.nome}>
                 {country.nome}
@@ -159,7 +160,7 @@ const Form = props => {
             ))}
           </select>
           <div className="invalid-feedback">
-            <strong>Você tem que selecionar um país</strong>
+            <strong>* Você tem que selecionar um país</strong>
           </div>
         </div>
         <div className="form-group form-check p-4">
