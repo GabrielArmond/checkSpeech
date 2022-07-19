@@ -1,0 +1,33 @@
+.app {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+
+  background-color: #fff;
+  color: white;
+  min-width: 100%;
+  overflow-x: hidden;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.grab {
+  cursor: grab;
+}
+
+.grab:active {
+  cursor: grabbing;
+}
+
+.card {
+  color: black;
+}
+
+footer {
+  color: black;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}

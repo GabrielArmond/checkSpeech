@@ -1,0 +1,25 @@
+.title {
+  font-weight: 700;
+  font-size: 3.0rem;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.55em;
+}
+
+.description {
+  font-weight: 600;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  text-align: center;
+}
