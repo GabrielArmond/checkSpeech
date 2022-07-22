@@ -51,7 +51,7 @@ const Prices = () => {
         <p className="title">Preços</p>
       </div>
       {prices.map((price, index) => (
-        <div key={index} className="col-md-4 p-2">
+        <div key={index} className="col-md-4 p-2 card-group">
           <div className={`card roboto ${price.style}`}>
             <h5 className="card-header">
               <strong>

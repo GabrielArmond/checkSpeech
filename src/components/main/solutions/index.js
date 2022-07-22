@@ -40,7 +40,7 @@ const Solutions = () => {
         <p className="title">Soluções</p>
       </div>
       {cards.map((card, index) => (
-        <div key={index} className="col-md-6 col-sm-12 col-12 p-2">
+        <div key={index} className="col-md-6 col-sm-12 col-12 p-2 card-group">
           <div className="card">
             <img
               className="card-img-top"
