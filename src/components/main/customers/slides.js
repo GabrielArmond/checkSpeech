@@ -13,7 +13,7 @@ const Slides = () => {
   let images = [logo, logo2, logo3, logo4, logo5, logo6, logo7, logo8]
   return (
     <>
-      <div className="col-12 col-md-12 col-sm-12 grab">
+      <div className="col-12 col-md-8 col-sm-12 grab">
         <Swiper className="mySwiper">
           {images.map((image, index) => (
             <SwiperSlide key={index}>
