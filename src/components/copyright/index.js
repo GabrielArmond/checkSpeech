@@ -12,7 +12,7 @@ const Copyright = () => {
         className="copyright text-secondary text-center pointer"
         onClick={openGithub}
       >
-        Copyright © 2022 Gabriel Guerra
+        Copyright © {new Date().getFullYear()} Gabriel Guerra
       </span>
     </Fragment>
   )
